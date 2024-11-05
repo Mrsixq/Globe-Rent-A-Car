@@ -457,9 +457,72 @@ input[type="number"] {
     width: 100%;
     justify-content: center;
   }
+
+   .footer .map-box .iframe {
+    width: 540px;
+  }
 }
 
 @media (min-width: 576px) {
+  #main-header {
+    height: 40vh;
+  }
+
+  #main-nav .container {
+    width: 560px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content .container {
+    width: 560px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+    align-items: center;
+  }
+
+  .content .container .text-box {
+    padding: 0 1rem;
+    width: 560px;
+  }
+
+  .content .container h1 {
+    font-size: 2rem;
+  }
+
+  .image-box img {
+    padding: 0;
+  }
+
+  .services .container {
+    width: 560px;
+    padding: 0 1rem;
+  }
+
+  .services .container .card-holder {
+    flex-direction: column;
+  }
+
+  .services .container .card {
+    width: 540px;
+    margin-bottom: 20px;
+  }
+
+  .services .container .card-holder img {
+    width: 100%;
+  }
+
+  .footer .container {
+    grid-template-areas: "locations" "map-box" "social-icons";
+    width: 560px;
+    justify-content: center;
+  }
+
+  .footer .map-box .iframe {
+    width: 540px;
+  }
 }
 
 @media (min-width: 768px) {
