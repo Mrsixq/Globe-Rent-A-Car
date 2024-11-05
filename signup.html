@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kayıt Ol</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav id="main-nav" class="nav">
+      <div class="container">
+        <h1>
+          <a href="index.html"
+            ><i class="fa-solid fa-globe"></i> <span>Globe</span> Rent A Car</a
+          >
+        </h1>
+        <ul>
+          <li><a href="index.html">Anasayfa</a></li>
+          <li><a href="cars.html">Araçlar</a></li>
+          <li><a href="#">İletişim</a></li>
+        </ul>
+        <div class="login">
+          <a href="signup.html" class="active">Kayıt Ol</a>
+          <span>|</span>
+          <a href="signin.html">Giriş</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- main -->
+    <main class="main">
+      <!-- form -->
+      <form action="" class="form">
+        <div class="container">
+          <h1><span>Kayıt Ol</span></h1>
+          <label for="fullName">Tam Ad</label>
+          <input
+            type="text"
+            name="fullName"
+            placeholder="Tam Adınızı Giriniz"
+            required
+            title="Lütfen Bu Alanı Doldurunuz"
+          />
+          <label for="idNumber">Kimlik No</label>
+          <input
+            type="text"
+            name="idNumber"
+            placeholder="Kimlik Kartı Numaranız"
+            required
+            title="Lütfen Bu Alanı Doldurunuz"
+          />
+          <label for="email">Eposta</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="E-posta Adresiniz"
+            required
+            title="Lütfen Bu Alanı Doldurunuz"
+          />
+          <label for="phone">Telefon No</label>
+          <input
+            type="number"
+            name="phone"
+            placeholder="Telefon Numaranız"
+            required
+            title="Lütfen Bu Alanı Doldurunuz"
+          />
+          <input
+            type="checkbox"
+            name="termsofuse"
+            required
+            title="Lütfen Bu Alanı Doldurunuz"
+          />
+          <label for="termsofuse"
+            ><a
+              href="https://www.termsfeed.com/blog/sample-terms-and-conditions-template/"
+              target="_blank"
+              id="termsofuse"
+              class="checkbox"
+              >Şartlar &amp; Koşulları</a
+            >
+            Kabul Ediyorum</label
+          >
+          <button class="btn btn-warning" type="submit">Kayıt Ol</button>
+        </div>
+      </form>
+    </main>
+
+    <!-- foooter -->
+    <footer id="main-footer" class="footer">
+      <div class="container">
+        <div class="locations">
+          <p>Şubelerimiz</p>
+          <p class="location">
+            <i class="fa-solid fa-location-dot"></i>LEFKOŞA OFİS
+          </p>
+          <p class="location">
+            <i class="fa-solid fa-location-dot"></i>ERCAN HAVAALANI ŞUBESİ
+          </p>
+          <p class="location">
+            <i class="fa-solid fa-location-dot"></i>LARNAKA HAVAALANI ŞUBESİ
+          </p>
+          <p class="location">
+            <i class="fa-solid fa-location-dot"></i>BAF HAVAALANI ŞUBESİ
+          </p>
+        </div>
+        <div class="map-box">
+          <iframe
+            src="https://www.google.com/maps/d/embed?mid=1REyHk2kHQ4qi8MbcxN4NKB8KKWtkTmk"
+            width="340"
+            height="280"
+          ></iframe>
+        </div>
+        <div class="social-icons">
+          <p>Bizi Takip Edin</p>
+          <ul>
+            <li>
+              <p>
+                <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="#"><i class="fab fa-x-twitter"></i> Twitter</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

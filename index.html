@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anasayfa</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav id="main-nav" class="nav">
+      <div class="container">
+        <h1>
+          <a href="index.html"
+            ><i class="fa-solid fa-globe"></i> <span>Globe</span> Rent A Car</a
+          >
+        </h1>
+        <ul>
+          <li><a href="index.html" class="active">Anasayfa</a></li>
+          <li><a href="cars.html">Araçlar</a></li>
+          <li><a href="#">İletişim</a></li>
+        </ul>
+        <div class="login">
+          <a href="signup.html">Kayıt Ol</a>
+          <span>|</span>
+          <a href="signin.html">Giriş</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- header -->
+    <header id="main-header" class="header">
+      <div class="container">
+        <div class="header-container">
+          <div class="search-box">
+            <div class="dropdown-box">
+              <label for="car-class" class="block"> </label>
+              <select name="car-class">
+                <option value="0">Araç Türü</option>
+                <option value="1">Sedan</option>
+                <option value="2">SUV</option>
+              </select>
+            </div>
+            <div class="price-box">
+              <label for="price" class="block">Bütçe Limiti(TL)</label>
+              <input type="text" name="price" placeholder="örn. 3500" />
+            </div>
+            <div class="arrow-box">
+              <label for="car-class" class="block"> </label>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div class="button-box">
+              <button class="btn btn-primary">Kirala</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- main -->
+    <main>
+      <!-- Tanıtım -->
+      <div class="content">
+        <div class="container">
+          <div class="image-box">
+            <img src="images/leftimage.png" alt="" />
+          </div>
+          <div class="text-box">
+            <h1><span>Globe</span><br />Rent A Car</h1>
+            <p>
+              Kuzey Kıbrıs’ın lider araç kiralama şirketi olan Globe Rent a Car,
+              kurulduğu 1978 yılından itibaren müşteri memnuniyeti odaklı hizmet
+              anlayışı ve Kuzey Kıbrıs’taki en rekabetçi araç kiralama fiyatları
+              ile Kuzey Kıbrıs’ta hesaplı araç kiralama imkânı sağlamaktadır.
+            </p>
+            <button class="btn btn-warning">Araçlara Göz At!</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Servisler -->
+      <div class="services">
+        <div class="container">
+          <h1>Hizmetlerimiz</h1>
+          <p>
+            Kuzey Kıbrıs'ın dört bir tarafında, müşterilerimize, araç kiralama
+            ve havaalanı transferi ihtiyaçları için kusursuz hizmeti vermek
+            adına 7/24, yorulmaksızın çalışıyoruz. Uzman ekibimiz ve kaliteli
+            araçlardan oluşan filomuz, size, hedefinize ulaşmakta destek olmak
+            için, pek çok noktada çağrınızı bekliyor.
+          </p>
+          <div class="card-holder">
+            <div class="card">
+              <img src="images/ercan-airport.jpg" alt="" />
+              <p>Ercan Havalimanı</p>
+            </div>
+            <div class="card">
+              <img src="images/larnaca-airport.jpg" alt="" />
+              <p>Larnaka Havalimanı</p>
+            </div>
+            <div class="card">
+              <img src="images/baf-airport.jpg" alt="" />
+              <p>Baf Havalimanı</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- foooter -->
+    <footer id="main-footer" class="footer">
+      <div class="container">
+        <div class="locations">
+          <p>Şubelerimiz</p>
+          <p class="location">
+            <i class="fa-solid fa-location-dot"></i>LEFKOŞA OFİS
+          </p>
+          <p class="location">
+            <i class="fa-solid fa-location-dot"></i>ERCAN HAVAALANI ŞUBESİ
+          </p>
+          <p class="location">
+            <i class="fa-solid fa-location-dot"></i>LARNAKA HAVAALANI ŞUBESİ
+          </p>
+          <p class="location">
+            <i class="fa-solid fa-location-dot"></i>BAF HAVAALANI ŞUBESİ
+          </p>
+        </div>
+        <div class="map-box">
+          <iframe
+            src="https://www.google.com/maps/d/embed?mid=1REyHk2kHQ4qi8MbcxN4NKB8KKWtkTmk"
+            width="340"
+            height="280"
+          ></iframe>
+        </div>
+        <div class="social-icons">
+          <p>Bizi Takip Edin</p>
+          <ul>
+            <li>
+              <p>
+                <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="#"><i class="fab fa-x-twitter"></i> Twitter</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
