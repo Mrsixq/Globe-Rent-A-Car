@@ -119,7 +119,7 @@ li {
 }
 
 .container {
-  width: 1140px;
+  width: 750px;
   margin: auto;
 }
 
@@ -239,12 +239,14 @@ li {
 
 .search-box .dropdown-box label {
   display: block;
+  font-size: 1.4rem;
 }
 
 .search-box .dropdown-box select {
   padding: 1rem 2rem;
   border-radius: 10px;
   border: 1px solid var(--dark);
+  margin-bottom: 10px;
 }
 
 .search-box .price-box label {
@@ -485,6 +487,10 @@ input[type="number"] {
   .content {
     margin-top: 50px;
   }
+
+  .main .form .container {
+    width: 100%;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
@@ -547,11 +553,20 @@ input[type="number"] {
   .footer .map-box .iframe {
     width: 540px;
   }
+
+  .main .form .container {
+    width: 560px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
   #main-nav .container {
     width: 750px;
+  }
+
+  .header .container .search-box {
+    width: 750px;
+    margin: auto;
   }
 
   .services .container {
@@ -579,7 +594,7 @@ input[type="number"] {
     align-items: center;
   }
 
-  .content .container .image-box img{
+  .content .container .image-box img {
     padding: 0;
   }
 
@@ -594,22 +609,17 @@ input[type="number"] {
   .iframe {
     width: 300px;
   }
+
+  .main .form .container {
+    width: 750px;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
-  body {
-    background-color: var(--danger);
-  }
 }
 
 @media (min-width: 1200px) and (max-width: 1400px) {
-  body {
-    background-color: var(--dark);
-  }
 }
 
 @media (min-width: 1400px) {
-  body {
-    background-color: var(--info);
-  }
 }
