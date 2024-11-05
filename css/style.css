@@ -2,7 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 @import url("form.css");
 
-/* @media (max-width: 576px) {
+@media (max-width: 576px) {
+  .container {
+    flex-direction: column;
+  }
 }
 
 @media (min-width: 576px) {
@@ -18,7 +21,7 @@
 }
 
 @media (min-width: 1400px) {
-} */
+}
 
 @supports (scrollbar-color: yellow black) {
   * {
