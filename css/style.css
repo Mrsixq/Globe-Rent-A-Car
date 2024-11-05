@@ -458,8 +458,8 @@ input[type="number"] {
     justify-content: center;
   }
 
-   .footer .map-box .iframe {
-    width: 540px;
+  .footer .map-box .iframe {
+    width: 100%;
   }
 }
 
