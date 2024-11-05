@@ -40,6 +40,14 @@ input[type="checkbox"]:checked:active {
   display: block;
 }
 
+.main .form .container textarea {
+  width: 100%;
+  padding: 1rem 2rem;
+  margin-bottom: 10px;
+  resize: none;
+  height: 150px;
+}
+
 .main .form .container button {
   margin-top: 10px;
 }
@@ -59,4 +67,27 @@ input[type="checkbox"]:checked:active {
 
 .main .form .container h1 {
   margin-top: 20px;
+}
+
+.main .form .container {
+  padding: 1rem 2rem;
+  margin: auto;
+  margin-top: 20px;
+  background-color: var(--light);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.main .form .container span {
+  display: block;
+  text-align: center;
+  color: var(--warning);
+}
+
+.main .form .container h1,
+.main .form .container p {
+  text-align: center;
+}
+
+.main .form .container p {
+  color: var(--secondary);
 }

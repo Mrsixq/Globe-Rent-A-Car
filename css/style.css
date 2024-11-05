@@ -225,6 +225,7 @@ li {
 }
 
 .search-box {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: flex;
   justify-content: center;
   align-items: center;

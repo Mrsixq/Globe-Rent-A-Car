@@ -29,7 +29,41 @@
       </div>
     </nav>
 
-    <main class="main"></main>
+    <!-- main -->
+    <main class="main">
+      <form action="" class="form">
+        <div class="container">
+          <span><i class="fa-solid fa-envelope-open fa-3x"></i></span>
+          <h1>Bize Ulaşın</h1>
+          <p>Teknik Bir Sorun veya Yardım İçin Bize Ulaşabilirsiniz</p>
+          <label for="fullName">Tam Adınız</label>
+          <input
+            type="text"
+            name="fullName"
+            placeholder="Tam Adınız"
+            required
+            title="Tam Adınızı Giriniz"
+          />
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Adresiniz"
+            required
+            title="Email Adresinizi Giriniz"
+          />
+          <label for="messageArea">Mesaj</label>
+          <textarea
+            name="messageArea"
+            placeholder="Mesajınız"
+            required
+            title="Lütfen Mesajınızı Giriniz"
+          ></textarea>
+
+          <button class="btn btn-warning">Gönder</button>
+        </div>
+      </form>
+    </main>
 
     <!-- foooter -->
     <footer id="main-footer" class="footer">
