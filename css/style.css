@@ -119,7 +119,7 @@ li {
 }
 
 .container {
-  width: 750px;
+  width: 1140px;
   margin: auto;
 }
 
@@ -616,10 +616,31 @@ input[type="number"] {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+  [class="container"] {
+    width: 980px;
+  }
+
+  #main-nav .container {
+    width: 980px;
+  }
 }
 
 @media (min-width: 1200px) and (max-width: 1400px) {
+  [class="container"] {
+    width: 1140px;
+  }
+
+  #main-nav .container {
+    width: 1140px;
+  }
 }
 
 @media (min-width: 1400px) {
+  [class="container"] {
+    width: 1240px;
+  }
+
+  #main-nav .container {
+    width: 1240px;
+  }
 }
