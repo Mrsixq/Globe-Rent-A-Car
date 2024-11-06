@@ -22,7 +22,7 @@
           <button class="dashboard-btn btn-light-gray-outline">
             <i class="fa-solid fa-user"></i> Hesabı Yönet
           </button>
-          <button class="dashboard-btn btn-light-gray-outline">
+          <button class="dashboard-btn btn-light-gray-outline" onclick="game()">
             <i class="fa-solid fa-right-from-bracket fa-rotate-180"></i> Oturumu
             Kapat
           </button>
@@ -30,5 +30,15 @@
       </aside>
       <div class="content"></div>
     </main>
+
+    <!-- niye bakıyon koda oç -->
+    <audio src="xqc-clap.mp3" id="sound"></audio>
+
+    <script>
+      function game() {
+        var audio = document.getElementById("sound");
+        audio.play();
+      }
+    </script>
   </body>
 </html>
