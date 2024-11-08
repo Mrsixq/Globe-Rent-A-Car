@@ -40,10 +40,6 @@ body {
   background-color: var(--light-color);
 }
 
-img {
-  width: 100%;
-}
-
 h1,
 h2,
 h3,
@@ -304,12 +300,15 @@ li {
 .image-box {
   background-size: cover;
   background-position: center;
-  width: 50%;
+  width: 100%;
+  height: 200px;
+  padding: 0;
 }
 
 .image-box img {
-  padding: 10rem;
+  padding: 0 2rem;
   width: 100%;
+  height: auto;
 }
 
 .text-box {
@@ -359,8 +358,10 @@ li {
 
 /* footer */
 .footer {
+  position: relative;
   background-color: var(--dark);
   color: #fff;
+  z-index: 2;
 }
 
 .footer i {
@@ -675,4 +676,148 @@ input[type="number"] {
   #main-nav .container {
     width: 1240px;
   }
+}
+
+.filter-box span:not([class="value"]):not([class="daily"]) {
+  color: var(--warning);
+  font-size: 2.5rem;
+}
+
+.daily {
+  color: #ccc;
+}
+
+.filter-box {
+  width: 250px;
+  position: fixed;
+  top: 120px;
+  left: 20px;
+  background-color: var(--light);
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  padding: 1rem;
+  border-radius: 15px;
+  z-index: 10;
+}
+
+.filter-box input::placeholder {
+  color: #aaa;
+}
+
+.car-content .card-holder {
+  margin-left: 300px;
+
+  padding: 5rem 5rem;
+}
+
+.car-content .card-holder .card {
+  width: 100%;
+  background-color: var(--light);
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  display: flex;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.car-image img {
+  width: 270px;
+}
+
+.car-details {
+  display: grid;
+}
+
+.car-price {
+  color: var(--warning);
+}
+
+.car-content .card-holder .card span {
+  padding: 5px 0 5px 10px;
+  align-items: center;
+}
+
+.car-content .card-holder .card button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 15%;
+}
+
+.brand-box {
+  font-size: 2.5rem;
+  color: var(--warning);
+}
+
+input[type="range"] {
+  -webkit-appearance: none; /* Webkit tarayıcılar için */
+  -moz-appearance: none; /* Firefox için */
+  appearance: none; /* Genel tarayıcılar için */
+  width: 100%; /* Slider'ın genişliği */
+  height: 10px; /* Track'in yüksekliği */
+  background: transparent; /* Arka planı şeffaf yap */
+  border-radius: 5px; /* Köşeleri yuvarlat */
+  outline: none; /* Focus border'ını kaldır */
+  transition: background 0.3s ease; /* Arka plan geçiş efekti */
+}
+
+/* Range input'un track kısmını (şerit) stilize ediyoruz */
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  background: #ddd; /* Sağdaki (değeri geçmeyen kısmın) rengi */
+  border-radius: 5px;
+}
+
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 10px;
+  background: #ddd; /* Sağdaki (değeri geçmeyen kısmın) rengi */
+  border-radius: 5px;
+}
+
+/* Range input'un thumb (yayı) stilini ayarlıyoruz */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Webkit tarayıcılar için */
+  appearance: none; /* Genel tarayıcılar için */
+  width: 20px; /* Thumb genişliği */
+  height: 20px; /* Thumb yüksekliği */
+  background: #555; /* Thumb rengi (koyu gri) */
+  border-radius: 50%; /* Thumb'ı yuvarlak yap */
+  cursor: pointer; /* Cursor pointer olur */
+  transition: background 0.2s ease; /* Thumb rengi geçiş efekti */
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #555;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Range input'un thumb üzerine geldiğinde renk değişikliği */
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: #444; /* Hover efekti (daha koyu gri) */
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  background: #444;
+}
+
+/* Sol kısımdaki (değeri geçmeyen kısmın) renk değişimini kontrol etmek için */
+input[type="range"].filled::-webkit-slider-runnable-track {
+  background: linear-gradient(
+    to right,
+    var(--warning) 0%,
+    var(--warning) 50%,
+    #ddd 50%
+  );
+}
+
+input[type="range"].filled::-moz-range-track {
+  background: linear-gradient(
+    to right,
+    var(--warning) 0%,
+    var(--warning) 50%,
+    #ddd 50%
+  );
 }

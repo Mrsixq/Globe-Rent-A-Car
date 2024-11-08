@@ -30,59 +30,130 @@
     </nav>
 
     <!-- main -->
-    <main class="main"></main>
+    <main class="main">
+      <div class="flex-box">
+        <!-- Filtreleme Kutusu (Sol Kısımda Sabit) -->
+        <aside class="filter-box">
+          <h3><span>Filtre</span></h3>
+          <label for="brand">Marka</label>
+          <select name="brand">
+            <option value="0">Marka Seçiniz</option>
+            <option value="1">Toyota</option>
+            <option value="2">Mercedes</option>
+          </select>
+          <label for="model">Model</label>
+          <input type="text" name="model" placeholder="Model Giriniz" />
+          <label for="class">Sınıfı</label>
+          <select name="class">
+            <option value="0">Sınıf Seçiniz</option>
+            <option value="1">Sedan</option>
+          </select>
+          <label for="city">Şehir</label>
+          <select name="city">
+            <option value="0">Şehir Seçiniz</option>
+            <option value="1">Lefkoşa</option>
+            <option value="2">Girne</option>
+          </select>
+          <label for="transmission">Vites Türü</label>
+          <select name="transmission">
+            <option value="0">Her İkisi de</option>
+            <option value="1">Otomatik</option>
+            <option value="2">Manuel</option>
+          </select>
+          <label for="pricerange"
+            >En Yüksek Fiyat <span class="daily">(günlük)</span></label
+          >
+          <input
+            type="range"
+            min="500"
+            max="5000"
+            value="50"
+            id="rangeInput"
+            step="100"
+          />
+          <span id="rangeValue" class="value">0TL</span>
+        </aside>
 
-    <!-- foooter -->
-    <footer id="main-footer" class="footer">
-      <div class="container">
-        <div class="locations">
-          <p>Şubelerimiz</p>
-          <p class="location">
-            <i class="fa-solid fa-location-dot"></i>LEFKOŞA OFİS
-          </p>
-          <p class="location">
-            <i class="fa-solid fa-location-dot"></i>ERCAN HAVAALANI ŞUBESİ
-          </p>
-          <p class="location">
-            <i class="fa-solid fa-location-dot"></i>LARNAKA HAVAALANI ŞUBESİ
-          </p>
-          <p class="location">
-            <i class="fa-solid fa-location-dot"></i>BAF HAVAALANI ŞUBESİ
-          </p>
-        </div>
-        <div class="map-box">
-          <iframe
-            src="https://www.google.com/maps/d/embed?mid=1REyHk2kHQ4qi8MbcxN4NKB8KKWtkTmk"
-            width="340"
-            height="280"
-          ></iframe>
-        </div>
-        <div class="social-icons">
-          <p>Bizi Takip Edin</p>
-          <ul>
-            <li>
-              <p>
-                <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
-              </p>
-            </li>
-            <li>
-              <p>
-                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-              </p>
-            </li>
-            <li>
-              <p>
-                <a href="#"><i class="fab fa-x-twitter"></i> Twitter</a>
-              </p>
-            </li>
-            <li>
-              <p>
-                <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
-              </p>
-            </li>
-          </ul>
+        <!-- Araç Listesi (Sağdaki Kısım) -->
+        <div class="car-content">
+          <div class="card-holder">
+            <!-- Araç 1 -->
+            <div class="card">
+              <div class="car-image">
+                <img src="images/cars/corolla.jpg" alt="Araç 1" />
+              </div>
+              <div class="car-details">
+                <div class="brand-box">
+                  <span class="car-name">Toyota</span>
+                  <span class="car-model">Corolla</span>
+                </div>
+                <span class="car-class">
+                  <i class="fa-solid fa-car-side"></i> Sedan
+                </span>
+                <span class="car-city">
+                  <i class="fa-solid fa-city"></i> Lefkoşa
+                </span>
+                <span class="car-transmission">
+                  <i class="fa-solid fa-gears"></i> Otomatik
+                </span>
+                <span class="car-price">
+                  <i class="fa-solid fa-money-bill-wave"></i>4000 ₺ (günlük)
+                </span>
+                <button class="btn btn-warning">Kirala</button>
+              </div>
+            </div>
+
+            <!-- Araç 2 -->
+            <div class="card">
+              <div class="car-image">
+                <img src="images/cars/caravan.jpg" alt="Araç 2" />
+              </div>
+              <div class="car-details">
+                <div class="brand-box">
+                  <span class="car-name">Mercedes</span>
+                  <span class="car-model">E-Class</span>
+                </div>
+                <span class="car-class">
+                  <i class="fa-solid fa-car-side"></i> Sedan
+                </span>
+                <span class="car-city">
+                  <i class="fa-solid fa-city"></i> Girne
+                </span>
+                <span class="car-transmission">
+                  <i class="fa-solid fa-gears"></i> Manuel
+                </span>
+                <span class="car-price">
+                  <i class="fa-solid fa-money-bill-wave"></i>5000 ₺ (günlük)
+                </span>
+                <button class="btn btn-warning">Kirala</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </footer>
+    </main>
+
+    <script>
+      const rangeInput = document.getElementById("rangeInput");
+      const rangeValue = document.getElementById("rangeValue");
+
+      function updateRangeBackground() {
+        const value = rangeInput.value;
+        const percentage = (value / rangeInput.max) * 100;
+
+        rangeInput.style.background = `linear-gradient(
+          to right,
+          var(--warning) ${percentage}%,
+          var(--track-color) ${percentage}%,
+          var(--track-color) 100%
+        )`;
+
+        rangeValue.textContent = value + "TL";
+      }
+
+      rangeInput.addEventListener("input", updateRangeBackground);
+
+      updateRangeBackground();
+    </script>
   </body>
 </html>
