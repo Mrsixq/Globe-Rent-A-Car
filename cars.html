@@ -67,11 +67,11 @@
             type="range"
             min="500"
             max="5000"
-            value="50"
+            value="500"
             id="rangeInput"
             step="100"
           />
-          <span id="rangeValue" class="value">0TL</span>
+          <span id="rangeValue" class="value">500TL</span>
         </aside>
 
         <!-- Araç Listesi (Sağdaki Kısım) -->
@@ -134,26 +134,17 @@
     </main>
 
     <script>
-      const rangeInput = document.getElementById("rangeInput");
-      const rangeValue = document.getElementById("rangeValue");
+      document.addEventListener("DOMContentLoaded", function () {
+        const rangeInput = document.getElementById("rangeInput");
+        const rangeValue = document.getElementById("rangeValue");
 
-      function updateRangeBackground() {
-        const value = rangeInput.value;
-        const percentage = (value / rangeInput.max) * 100;
+        function updateRangeValue() {
+          const value = rangeInput.value;
 
-        rangeInput.style.background = `linear-gradient(
-          to right,
-          var(--warning) ${percentage}%,
-          var(--track-color) ${percentage}%,
-          var(--track-color) 100%
-        )`;
-
-        rangeValue.textContent = value + "TL";
-      }
-
-      rangeInput.addEventListener("input", updateRangeBackground);
-
-      updateRangeBackground();
+          rangeValue.textContent = value + "TL";
+        }
+        rangeInput.addEventListener("input", updateRangeValue);
+      });
     </script>
   </body>
 </html>
